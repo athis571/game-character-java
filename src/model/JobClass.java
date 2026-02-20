@@ -1,0 +1,3 @@
+public enum JobClass {
+    NOVICE, SWORDSMAN, MAGE, ARCHER, ACOLYTE, MERCHANT, THIEF
+}
