@@ -1,18 +1,28 @@
-## Getting Started
+# Ragnarok Character Simulator (Java Console App)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+โปรเจกต์นี้เป็นแอปพลิเคชัน Console ที่เขียนด้วยภาษา Java แบบพื้นฐาน (Plain Java / No Build Tools) เพื่อจำลองระบบการสร้างตัวละครและเปลี่ยนอาชีพจากเกม MMORPG คลาสสิกอย่าง Ragnarok Online 
 
-## Folder Structure
+จุดประสงค์ของโปรเจกต์นี้คือการฝึกฝนแนวคิดการเขียนโปรแกรมเชิงวัตถุ (OOP) พื้นฐาน เช่น Class, Enum, Encapsulation และการรับค่าจากผู้ใช้ผ่านคีย์บอร์ดด้วย `Scanner`
 
-The workspace contains two folders by default, where:
+## ✨ ฟีเจอร์หลัก (Features)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* **Custom Character Creation:** ตั้งชื่อตัวละคร Novice ของคุณได้เองผ่าน Console
+* **Status Management:** ระบบจัดการ HP, SP และสเตตัสพื้นฐาน (STR, AGI, VIT, INT, DEX, LUK)
+* **Battle & Heal Simulation:** จำลองการรับดาเมจและการฟื้นฟูพลังชีวิต
+* **Leveling System:** ระบบอัปเลเวลเพื่อเพิ่ม Max HP และ Max SP
+* **Job Change System:** เปลี่ยนอาชีพคลาสแรก (First Job) ได้ 6 สายอาชีพ ได้แก่ Swordsman, Mage, Archer, Acolyte, Merchant และ Thief
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📂 โครงสร้างโปรเจกต์ (Project Structure)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+โปรเจกต์นี้จัดโครงสร้าง Package แบบมาตรฐาน Java ดังนี้:
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```text
+ragnarok-project/
+├── src/
+│   └── com/
+│       └── ragnarok/
+│           ├── model/
+│           │   ├── JobClass.java       # Enum เก็บข้อมูลสายอาชีพ
+│           │   └── RoCharacter.java    # คลาสหลักจัดการข้อมูลและลอจิกตัวละคร
+│           └── Main.java               # จุดเริ่มต้นของโปรแกรม (รัน Scanner รับค่า)
+└── README.md
